@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import { Ask } from './Ask';
+import { Success } from './Success';
 
 function App() {
+
+  const [showComponentA, setShowComponentA] = useState(true);
+
+  const handleButtonClick = () => {
+    setShowComponentA(!showComponentA);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showComponentA ? (
+        <Ask onClick={handleButtonClick} />
+      ) : (
+        <Success />
+      )}
     </div>
   );
 }
