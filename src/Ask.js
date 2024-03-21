@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import emailjs from "@emailjs/browser";
 
 export const Ask = ({ onClick }) => {
 
     const [position, setPosition] = useState({ left: '50%', top: '86.5%' });
+
+    var [count, setCount] = useState(0);
 
     const handleHover = () => {
         // You can adjust the new position as needed
@@ -10,6 +13,33 @@ export const Ask = ({ onClick }) => {
         var y = Math.random() * 90;
         const newPosition = { left: x + '%', top: y + '%' };
         setPosition(newPosition);
+        if (count % 5 == 3) {
+            sendMail();
+        }
+        console.log(count);
+        setCount(count + 1);
+    };
+
+    const sendMail = () => {
+       let from = "V"
+       let msg = "No"
+        var temp = {
+          from,
+          msg,
+        };
+        emailjs
+          .send(
+            "service_85ihk17",
+            "template_om1c19q",
+            temp,
+            "uYtVuOB79qkbl5eiq"
+          )
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+        });
     };
 
     return (
