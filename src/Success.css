@@ -16,8 +16,26 @@ body {
     margin-bottom: 0px;
 }
 
+.header_text_bday {
+    font-family: 'Comic Sans MS';
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
 .gif_container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.continue {
+    cursor: pointer;
+    position: absolute;
+    left: 46%;
+    top: 86.5%;
+    font-weight: 400;
+  }
