@@ -22,19 +22,19 @@ function App() {
        from,
        msg,
      };
-    //  emailjs
-    //  .send(
-    //   "service_85ihk17",
-    //   "template_om1c19q",
-    //   temp,
-    //   "uYtVuOB79qkbl5eiq"
-    // )
-    //    .then((res) => {
-    //      console.log(res);
-    //    })
-    //    .catch((err) => {
-    //      console.log(err);
-    //  });
+     emailjs
+     .send(
+      "service_85ihk17",
+      "template_om1c19q",
+      temp,
+      "uYtVuOB79qkbl5eiq"
+    )
+       .then((res) => {
+         console.log(res);
+       })
+       .catch((err) => {
+         console.log(err);
+     });
  };
 
  const showAsk = () => {

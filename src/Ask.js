@@ -27,27 +27,27 @@ export const Ask = ({ onClick }) => {
           from,
           msg,
         };
-        // emailjs
-        //   .send(
-        //     "service_85ihk17",
-        //     "template_om1c19q",
-        //     temp,
-        //     "uYtVuOB79qkbl5eiq"
-        //   )
-        //   .then((res) => {
-        //     console.log(res);
-        //   })
-        //   .catch((err) => {
-        //     console.log(err);
-        // });
+        emailjs
+          .send(
+            "service_85ihk17",
+            "template_om1c19q",
+            temp,
+            "uYtVuOB79qkbl5eiq"
+          )
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+        });
     };
 
     return (
         <div className='ask-page'><div className="hey">
-            Hey Vaishnavi!
+            
         </div>
             <div className="gif-container">
-                <img src="https://media.giphy.com/media/ZCSPaG9pPpSJEBiOUF/giphy.gif" alt="Cute animated illustration" />
+                <img src="https://media.giphy.com/media/QvvFkKfqwq82NniaIW/giphy.gif" alt="Cute animated illustration" />
             </div>
             <div className="ask-out">
                 Let's be friends?
